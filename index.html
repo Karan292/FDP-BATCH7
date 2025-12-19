@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Modern Contact Form</title>
+		<link rel="stylesheet" href="styles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="page-bg">
+			<div class="form-wrap">
+				<form id="contactForm" class="card" novalidate>
+					<h2 class="title">Get in touch</h2>
+
+					<div class="field">
+						<input id="name" name="name" type="text" required />
+						<label for="name">Full name</label>
+						<small class="error"></small>
+					</div>
+
+					<div class="field">
+						<input id="email" name="email" type="email" required />
+						<label for="email">Email address</label>
+						<small class="error"></small>
+					</div>
+
+					<div class="field">
+						<input id="password" name="password" type="password" required minlength="6" />
+						<label for="password">Password</label>
+						<small class="error"></small>
+					</div>
+
+					<div class="field">
+						<select id="country" name="country" required>
+							<option value="">Choose country</option>
+							<option>United States</option>
+							<option>Canada</option>
+							<option>United Kingdom</option>
+							<option>Australia</option>
+							<option>Other</option>
+						</select>
+						<label for="country" class="select-label">Country</label>
+						<small class="error"></small>
+					</div>
+
+					<div class="field">
+						<textarea id="message" name="message" rows="4" required></textarea>
+						<label for="message">Message</label>
+						<small class="error"></small>
+					</div>
+
+					<div class="row between">
+						<label class="checkbox">
+							<input id="terms" name="terms" type="checkbox" />
+							<span>I agree to the terms</span>
+						</label>
+						<button type="submit" class="btn">Send message</button>
+					</div>
+
+					<div id="success" class="success" hidden>
+						<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+						<div>Thanks — your message was sent!</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
